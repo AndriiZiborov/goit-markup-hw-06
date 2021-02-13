@@ -259,9 +259,9 @@ address a:focus {
   
 }
 
-.join-block {
-  /* outline: 1px solid tomato; */
-}
+.join-block  {
+  margin-right: 93px;
+} 
 
 .join-block-element {
   margin: 0;
@@ -280,8 +280,63 @@ address a:focus {
 .join-block .item-link {
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
-  
 }
+
+.join-block-form-input {
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  margin-right: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: inherit;  
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.join-block-form-input::placeholder {
+font-size: 16px;
+line-height: 1.25;
+color:  rgba(255, 255, 255, 0.6);
+}
+
+.join-block-form-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.join-block-form {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.join-block-form .button {
+   min-width: 200px;
+   height: 50px;
+   margin-top: 0;
+   padding-left: 0;
+}
+
+.join-block-form .button.first:hover {
+  background: #188CE8;
+  color: #fff;
+ }
+
+ .join-block-button-thumb {
+   position: relative;
+ }
+
+ .join-block-form .button-icon {
+   
+   position: absolute;
+   top: 50%;
+   right: 28px;
+   transform: translateY(-50%);
+   margin-left: 10px;  
+ }
+
 
    /* ============ ЗАКАЗ УСЛУГИ ============ */
 .background {
@@ -304,8 +359,6 @@ address a:focus {
   background-color: var(--dark-bg-color);
   text-align: center;
 }
-
-
 
 
 .service-title {
@@ -823,14 +876,16 @@ transform: translateY(-100%);
 }
 
 /* ================== ФОРМА МОДАЛКИ=============== */
-
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
 
 .modal-form-label {
-  position: relative;
-  display: block;
-  text-align: left;
+  position: relative;  
   margin-top: 10px;
 
+  text-align: left;
   font-size: 12px;
   line-height: 14px;  
   letter-spacing: 0.01em;
@@ -847,6 +902,7 @@ transform: translateY(-100%);
 
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-title {
@@ -867,13 +923,18 @@ color: var(--primary-text-color);
   padding: 12px 16px;
 }
 
-.modal-form-label textarea::-webkit-input-placeholder {
+.message::placeholder {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
 .modal-form-checkbox {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   margin-top: 20px;
+
   font-size: 14px;
   line-height: 1.71;
   color: #757575;
@@ -887,15 +948,11 @@ color: #2196F3;
   display: inline-block;
   width: 16px;
   height: 15px;
+  margin-right: 8px;
   border: 2px solid;
   border-radius: 3px;
   border-color: #212121;
-}
-
-.checkbox-input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-   appearance: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-input:checked + .checkbox-icon{
@@ -904,34 +961,63 @@ color: #2196F3;
   background-image: url(../img/iconcheck.svg);
   background-size: contain;
   background-origin: border-box;
+ 
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
 
- .modal-form .button:hover {
- background: #188CE8;
- color: #fff;
+ /* .checkbox-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+   appearance: none;
+} */
+
+.checkbox-input:focus + .checkbox-icon {
+  outline: 1px solid var(--accent-color);
 }
+
 .form-thumb{
-  
+  /* outline: 1px solid tomato; */
   position: relative;
+  display: block;
   width: 100%;
   height: 100%;
 }
 
-.name-icon {
-  background-color: teal;
+.name-icon {  
   position: absolute;
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form-input:focus ~ .name-icon { 
-  background-color: var(--accent-color);
-
+.modal-form-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
 }
 
-.modal-form-input:focus-visible {
-  outline-color: var(--accent-color);
+.modal-form-input:focus + .name-icon { 
+  fill: var(--accent-color);
 }
 
-  
+.modal-form .button {
+  min-width: 200px;
+  height: 50px;
+  align-self: center;
+}
+
+.modal-form .button:hover {
+  background: #188CE8;
+  color: #fff;
+ }
+
+ .visually-hidden {
+    position: absolute !important; 
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+ }

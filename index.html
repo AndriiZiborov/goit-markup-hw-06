@@ -84,45 +84,52 @@
         </button>
 
         <!-- Форма модалки -->
-        <form class="modal-form">
-          <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+        <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
+        <form class="modal-form" action="#">
 
-          <label class="modal-form-label">
-            Имя
-          </label>
-          <div class="form-thumb">
-            <input name="name" type="text" class="modal-form-input">
-              <svg class="name-icon" width="18" height="18  ">
-                <use></use>
-              </svg>        
-            </div>
+        <label class="modal-form-label">Имя
+          <span class="form-thumb">
+            <input name="name" type="text" class="modal-form-input" placeholder="" required>
+            <svg class="name-icon" width="18" height="18  ">
+                <use href="./img/sprite.svg#icon-person-black-18dp-1"></use>
+            </svg>        
+          </span>
+        </label>
 
         <label class="modal-form-label"> 
-          Телефон
-        <input name="phone" type="tel" class="modal-form-input">
-      </label>
+           Телефон
+          <span class="form-thumb">
+            <input name="phone" type="tel" class="modal-form-input">
+            <svg class="name-icon" width="18" height="18  ">
+              <use href="./img/sprite.svg#icon-phone-black-18dp-1"></use>
+            </svg>        
+         </span>
+        </label>
 
-      <label class="modal-form-label"> 
-        Почта
-      <input name="email" type="email" class="modal-form-input">
-    </label>
+        <label class="modal-form-label"> 
+           Почта
+         <span class="form-thumb">  
+          <input name="email" type="email" class="modal-form-input">
+          <svg class="name-icon" width="18" height="18  ">
+            <use href="./img/sprite.svg#icon-email-black-18dp-1"></use>
+          </svg> 
+        </span>
+       </label>
 
-     <label class="modal-form-label">
-       Комментарий
-       <textarea maxlength="" name="message" class="message modal-form-input" placeholder="Введите текст" ></textarea>
-      </label>
- 
-      <label class="modal-form-checkbox" >
-        <input class="checkbox-input"
-         name="agreement" type="checkbox" value="agreement">
-        <span class="checkbox-icon"></span>
-        Соглашаюсь с рассылкой и принимаю
-        <a href="">Условия договора</a> 
-      </label>
+        <label class="modal-form-label">
+          Комментарий
+          <textarea class="message modal-form-input" placeholder="Введите текст" maxlength="" name="message"  ></textarea>
+        </label>
 
-      <button class="button first" type="submit">Отправить</button>
+        <label class="modal-form-checkbox" >
+          <input class="checkbox-input visually-hidden"
+           name="agreement" type="checkbox">
+          <span class="checkbox-icon"></span>
+          Соглашаюсь с рассылкой и принимаю
+          <a href="">Условия договора</a> 
+        </label>
 
-
+        <button class="button first" type="submit">Отправить</button>
         </form>
       </div>
     </div>
@@ -469,14 +476,18 @@
       </div>
 
       <div class="join-block">
-        
-        <form>
-          <label class="join-block-element">
-            подпишитесь на рассылку
-          </label>
-           <input type="text" name="" >
+        <b class="join-block-element">подпишитесь на рассылку</b>
+       
+        <form class="join-block-form">
           
-          <button class="button first" type="submit"></button>
+         <input class="join-block-form-input" type="mail" name="email" placeholder="E-mail">
+         
+         <div class="join-block-button-thumb">
+           <button class="button first" type="submit">Подписаться</button>
+           <svg class="button-icon" width="24" height="24">
+             <use href="./img/sprite.svg#icon-tg"> </use>
+           </svg>
+        </div>
         </form>
       </div>
 
