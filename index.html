@@ -118,16 +118,16 @@
 
         <label class="modal-form-label">
           Комментарий
-          <textarea class="message modal-form-input" placeholder="Введите текст" maxlength="" name="message"  ></textarea>
+          <textarea class="message modal-form-input" placeholder="Введите текст" name="message"  ></textarea>
         </label>
 
-        <label class="modal-form-checkbox" >
-          <input class="checkbox-input visually-hidden"
+          <input id="policy" class="checkbox-input visually-hidden"
            name="agreement" type="checkbox">
-          <span class="checkbox-icon"></span>
-          Соглашаюсь с рассылкой и принимаю
-          <a href="">Условия договора</a> 
-        </label>
+          <label for="policy" class="modal-form-checkbox" >
+          <!-- <span class="checkbox-icon"></span> -->    
+          Соглашаюсь с рассылкой и принимаю 
+           <a href=""> Условия договора</a>
+         </label> 
 
         <button class="button first" type="submit">Отправить</button>
         </form>
@@ -480,7 +480,7 @@
        
         <form class="join-block-form">
           
-         <input class="join-block-form-input" type="mail" name="email" placeholder="E-mail">
+         <input class="join-block-form-input" type="email" name="email" placeholder="E-mail">
          
          <div class="join-block-button-thumb">
            <button class="button first" type="submit">Подписаться</button>
